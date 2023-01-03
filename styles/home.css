@@ -2,7 +2,7 @@
 * { box-sizing: border-box; }
 
 :root {
-  --background: black;
+  --background: linear-gradient(90deg, rgba(34,33,28,1) 23%, rgba(57,53,51,1) 100%);
   --grey-1: #9a9c9e;
   --purple-medium-1: #DBDBDD;
   --red-1: #b41715;
@@ -227,10 +227,35 @@ button {
   max-width: 150px;
 }
 
+.trendingPreview-seriesList {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+    height: 241px;
+    padding-left: 24px;
+    padding-bottom: 16px;
+    
+  }
+
+  .trendingPreview-seriesList .serie-container {
+    display: inline-block;
+    margin-right: 8px;
+  }
+  
+  .trendingPreview-seriesList .serie-container .serie-img {
+    height: 225px;
+    min-height: 225px;
+    max-height: 225px;
+    width: 150px;
+    min-width: 150px;
+    max-width: 150px;
+  }
 
 /* Categories */
 .category-container {
-  width: 45%;
+  width: 40%;
+  display: flex; 
+  justify-content: space-between; 
   
 }
 
@@ -242,36 +267,19 @@ button {
   text-overflow: ellipsis;
 }
 
-.category-title::before {
-  content: '••••';
-  color: transparent;
-  /* TODO: cambiar color por ID de la categoría */
-  background-color: var(--idColor);
-  border-radius: 8px;
-  margin-right: 8px;
-  width: 8px;
-  height: 8px;
-}
-#id28 { --idColor: var(--yellow); }
-#id12 { --idColor: var(--red); }
-#id16 { --idColor: var(--green); }
-#id35 { --idColor: var(--lightBlue); }
-#id80 { --idColor: var(--darkBlue); }
-#id99 { --idColor: var(--white-1); }
-#id18 { --idColor: var(--purple-medium-1); }
-#id10751 { --idColor: var(--yellow); }
-#id14 { --idColor: var(--red); }
-#id36 { --idColor: var(--green); }
-#id27 { --idColor: var(--lightBlue); }
-#id10402 { --idColor: var(--darkBlue); }
-#id9648 { --idColor: var(--white-1); }
-#id10749 { --idColor: var(--purple-medium-1); }
-#id878 { --idColor: var(--yellow); }
-#id10770 { --idColor: var(--red); }
-#id53 { --idColor: var(--green); }
-#id10752 { --idColor: var(--lightBlue); }
-#id37 { --idColor: var(--darkBlue); }
-
+.category-button {
+    
+  color: white;
+  padding: 10px 15px;
+  margin-top: 10px;
+  text-align: center;
+  font-size: 16px;
+  border-radius: 15%;
+  border: 5px solid #333; /* Add a thick border */
+  text-decoration: none;
+  
+  }
+  
 
 /* Generic List (search, trending & category) */
 .genericList-container {

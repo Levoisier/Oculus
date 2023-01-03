@@ -13,11 +13,14 @@
 </head>
 <body>
     <header id="header" class="header-container">
+
         <span class="header-arrow inactive">&lt;</span>
         <h1 class="header-title">Oculus</h1>
         <div class="flex items-center flex-grow flex-shrink-0 lg:flex-grow-0">
+            <a href="./index.html">
             <svg xmlns="http://www.w3.org/2000/svg" height="50" width="50" viewBox="0 0 24 24" fill="#FFFFFF"><!--! Font Awesome Pro 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M0 0h24v24H0z" fill="none"/><path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
-          </div>
+            </a>
+        </div>
         <p></p>
         <h1 class="header-title header-title--categoryView inactive">Acción</h1>
         <form id="searchForm" class="header-searchForm">
@@ -25,27 +28,31 @@
         <button>🔍</button>
         </form>
     </header>
+
     <section id="trendingPreview" class="trendingPreview-container">
         <div class="trendingPreview-header">
-        <h2 class="trendingPreview-title">Trending right now</h2>
-        <button class="trendingPreview-btn">More</button>
+        <h2 class="trendingPreview-title">Trending films</h2>
+        <button class="trendingPreview-btn">See all</button>
         </div>
         <article class="trendingPreview-movieList">
             <!-- List from API -->
         </article>
+        <div class="trendingPreview-header">
+        <h2 class="trendingPreview-title">Trending series</h2>
+        <button class="trendingPreview-btn">See all</button>
+        </div>
+        <article class="trendingPreview-seriesList">
+            <!-- List from API -->
+        </article>
         </section>
+    
     <section id="categoriesPreview" class="categoriesPreview-container">
         <h2 class="categoriesPreview-title">Genres</h2>
         <article class="categoriesPreview-list">
-        <div class="category-container">
+       <!--  <div class="category-container">
         <h3 id="id28" class="category-title">Romance</h3>
-        </div>
-        <div class="category-container">
-        <h3 id="id16" class="category-title">Science fiction</h3>
-        </div>
-        <div class="category-container">
-        <h3 id="id14" class="category-title">Action</h3>
-        </div>
+        </div> -->
+      <!-- API genres -->
         </article>
         </section>
     <section id="genericList" class="genericList-container inactive">
