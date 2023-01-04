@@ -252,6 +252,11 @@ button {
   }
 
 /* Categories */
+
+.categoriesPreview-title {
+  text-align: center;
+  font-size: 30px ;
+}
 .category-container {
   width: 40%;
   display: flex; 
