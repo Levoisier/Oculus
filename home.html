@@ -22,7 +22,7 @@
             </a>
         </div>
         <p></p>
-        <h1 class="header-title header-title--categoryView inactive">Acción</h1>
+        <h1 class="header-title header-title--categoryView inactive"></h1>
         <form id="searchForm" class="header-searchForm">
         <input style="font-size: 15px; font-family: serif; color: bisque; font-size: large;" type="text" placeholder="Search movies or series..." />
         <button  id="searchBtn" type="button">🔍</button>
@@ -37,9 +37,9 @@
         <article class="trendingPreview-movieList">
             <!-- List from API -->
         </article>
+    
         <div class="trendingPreview-header">
         <h2 class="trendingPreview-title">Trending series</h2>
-        <button class="trendingPreview-btn">See all</button>
         </div>
         <article class="trendingPreview-seriesList">
             <!-- List from API -->
@@ -56,28 +56,22 @@
         </article>
         </section>
     <section id="genericList" class="genericList-container inactive">
-        <div class="movie-container">
+       <!--  <div class="movie-container">
         <img
                 src="https://image.tmdb.org/t/p/w300/adOzdWS35KAo21r9R4BuFCkLer6.jpg"
                 class="movie-img"
                 alt="Nombre de la película"
               />
-        </div>
-        <div class="movie-container">
-        <img
-                src="https://image.tmdb.org/t/p/w300/adOzdWS35KAo21r9R4BuFCkLer6.jpg"
-                class="movie-img"
-                alt="Nombre de la película"
-              />
-        </div>
-        <div class="movie-container">
-        <img
-                src="https://image.tmdb.org/t/p/w300/adOzdWS35KAo21r9R4BuFCkLer6.jpg"
-                class="movie-img"
-                alt="Nombre de la película"
-              />
-        </div>
-        </section>
+        </div> -->
+        <!-- API category -->
+        
+    </section>
+
+    <section id="pageBtns" class="inactive">
+    <button id="lastPage-btn" type="button" class="lastPage-btn"><<</button>
+    <button id="nextPage-btn" type="button" class="nextPage-btn">>></button>
+    </section>
+
     <section id="movieDetail" class="movieDetail-container inactive">
         <h1 class="movieDetail-title">Deadpool</h1>
         <span class="movieDetail-score">7.6</span>

@@ -190,6 +190,7 @@ button {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-top: 20px;
   
 }
 
@@ -240,6 +241,7 @@ button {
   .trendingPreview-seriesList .serie-container {
     display: inline-block;
     margin-right: 8px;
+   
   }
   
   .trendingPreview-seriesList .serie-container .serie-img {
@@ -249,6 +251,7 @@ button {
     width: 150px;
     min-width: 150px;
     max-width: 150px;
+  
   }
 
 /* Categories */
@@ -276,15 +279,29 @@ button {
     
   color: white;
   padding: 10px 15px;
-  margin-top: 10px;
+  margin-top: 2px;
   text-align: center;
   font-size: 16px;
   border-radius: 15%;
-  border: 5px solid #333; /* Add a thick border */
+  border: 3px solid rgb(32, 40, 82); /* Add a thick border */
   text-decoration: none;
   
   }
   
+  #pageBtns {
+    text-align: center;
+  }
+  .lastPage-btn {
+    border-radius: 8px;
+    height: 32px;
+    width: 72px;
+  }
+
+  .nextPage-btn {
+    border-radius: 8px;
+    height: 32px;
+    width: 72px;
+  }
 
 /* Generic List (search, trending & category) */
 .genericList-container {
