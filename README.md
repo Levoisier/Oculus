@@ -1,10 +1,13 @@
-# Oculus
-Movie and TV series streaming platform
-
-Project using JS, CSS with tailwind and public API's.
-
-It's optimized ONLY for mobile devices.
+# *Welcome to Oculus*
 
 
-Cristian Zapata.
-2023
+>  *Oculus is a blogtype platform for movies and series.*
+> 
+> *It helps finding what movie you want to watch, what's trending, calification, category & much more!*
+
+
+
+```diff
++ Currently, this platform is optimized only for mobile devices, thus the interface in other devices may not be the best.
+```
+
