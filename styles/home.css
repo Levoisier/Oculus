@@ -10,12 +10,25 @@
   --white-1: #DBDBDD;
   
 
-  --yellow: #EECC75;
-  --green: #CAD297;
-  --aqua: #B7EAC5;
-  --lightBlue: #A2EEE5;
-  --darkBlue: #8EA2EA;
-  --red: #F09D9D;
+  --category_1: #243763;
+  --category_2: #79b139;
+  --category_3: #14b414;
+  --category_4: #2C74B3;
+  --category_5: #3E6D9C;
+  --category_6: #E14D2A;
+  --category_7: #FF6E31;
+  --category_8: #FD841F;
+  --category_9: #FFB26B;
+  --category_10:#FFEBB7;
+  --category_11:#AD8E70;
+  --category_13:#C58940;
+  --category_14:#665A48;
+  --category_15:#3C2317;
+  --category_16:#282A3A;
+  --category_17:#000000;
+  --category_18:#CF0A0A;
+  --category_19:#FB2576;
+  
 
   --font-family-titles: serif;
   --font-family-text: serif;
@@ -278,17 +291,40 @@ button {
 
 .category-button {
     
-  color: white;
+  color: whitesmoke;
   padding: 10px 15px;
-  margin-top: 2px;
+  margin-top: 4px;
   text-align: center;
   font-size: 16px;
   border-radius: 15%;
-  border: 3px solid rgb(32, 40, 82); /* Add a thick border */
+  border: 2px solid white; 
   text-decoration: none;
+  background-color:  var(--idColor);
   
   }
-  
+
+#id28 { --idColor: var(--category_1);}
+#id12 { --idColor: var(--category_2); }
+#id16 { --idColor: var(--category_3); }
+#id35 { --idColor: var(--category_4); }
+#id80 { --idColor: var(--category_5); }
+#id99 { --idColor: var(--category_6); }
+#id18 { --idColor: var(--category_7); }
+#id10751 { --idColor: var(--category_8); }
+#id14 { --idColor: var(--category_9); }
+#id36 { --idColor: var(--category_1); }
+#id27 { --idColor: var(--category_11); }
+#id10402 { --idColor: var(--category_12); }
+#id9648 { --idColor: var(--category_13); }
+#id10749 { --idColor: var(--category_14); }
+#id878 { --idColor: var(--category_15); }
+#id10770 { --idColor: var(--category_16); }
+#id53 { --idColor: var(--category_17); }
+#id10752 { --idColor: var(--category_18); }
+#id37 { --idColor: var(--category_19); }
+#id10402 { --idColor: var(--category_3); }
+
+
   #pageBtns {
     text-align: center;
   }
@@ -346,15 +382,19 @@ button {
   text-align: right;
   width: 18%;
   font-weight: var(--font-weight-title2);
+  font-size: 20px;
 }
 .movieDetail-score::before {
   content: '★';
-  color: var(--yellow);
+  color: yellow;
   padding-right: 4px;
+  font-size: 20px;
 }
 
 .movieDetail-description {
   margin: 0 0 24px 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-align: justify;
 }
 
 .relatedMovies-container {

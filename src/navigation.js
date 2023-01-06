@@ -1,7 +1,7 @@
 const ce = (element) => document.createElement(element);
 
 searchFormBtn.addEventListener('click', () => {
-    location.hash = '#search=';
+    location.hash = '#search=' + searchFormInput.value.trim();
 });
 
 trendingBtn.addEventListener('click', () => {
@@ -9,7 +9,8 @@ trendingBtn.addEventListener('click', () => {
 });
 
 arrowBtn.addEventListener('click', () => {
-    location.hash = '#home=';
+    searchForm.reset();
+    window.history.back();
 });
 
 window.addEventListener('hashchange', () => {
@@ -83,8 +84,9 @@ function categoriesPage(){
 }
 
 function movieDetailsPage(){
-    console.log('movie details');
 
+    window.scroll(0,0);
+    
     headerSection.classList.add('header-container--long');
     /* headerSection.style.background = ''; */
     logo.classList.add('inactive')
@@ -100,10 +102,12 @@ function movieDetailsPage(){
     genericSection.classList.add('inactive');
     movieDetailSection.classList.remove('inactive');
 
+    const [_, movieId] = location.hash.split('=');
+    getMovieById(movieId)
 }
 
 function searchPage(){
-    console.log('Search page');
+    
 
     headerSection.classList.remove('header-container--long');
     headerSection.style.background = '';
@@ -111,13 +115,17 @@ function searchPage(){
     arrowBtn.classList.remove('inactive');
     headerTitle.classList.add('inactive');
     headerCategoryTitle.classList.remove('inactive');
-    headerCategoryTitle.innerHTML = '';
+    /* headerCategoryTitle.innerHTML = ''; */
     searchForm.classList.remove('inactive');
     pageBtns.classList.add('inactive');
     trendingPreviewSection.classList.add('inactive');
     categoriesPreviewSection.classList.add('inactive');
     genericSection.classList.remove('inactive');
     movieDetailSection.classList.add('inactive');
+
+    //
+    const [_, query] = location.hash.split('=');
+    getMoviesBySearch(query);
 }
 
 function trendsPage(){
@@ -131,10 +139,13 @@ function trendsPage(){
     headerCategoryTitle.classList.remove('inactive');
     headerCategoryTitle.innerHTML = "Today's trends";
     searchForm.classList.add('inactive');
-    pageBtns.classList.add('inactive');
+    pageBtns.classList.remove('inactive');
     trendingPreviewSection.classList.add('inactive');
     categoriesPreviewSection.classList.add('inactive');
     genericSection.classList.remove('inactive');
     movieDetailSection.classList.add('inactive');
+
+    getTrendingMovies();
+
 }
 
