@@ -158,6 +158,7 @@ button {
   margin-bottom: 16px;
   cursor: pointer;
   display: inline-block;
+  
 }
 .header-arrow--white {
   color: var(--background);

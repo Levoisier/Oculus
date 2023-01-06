@@ -51,7 +51,7 @@ function homePage(){
     genericSection.classList.add('inactive');
     movieDetailSection.classList.add('inactive');
 
-
+    page = 1;
     getTrendingPreview();
     getCategoriesPreview();   
 }
