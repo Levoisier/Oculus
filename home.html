@@ -41,9 +41,17 @@
         <div class="trendingPreview-header">
         <h2 class="trendingPreview-title">Top Rated</h2>
         </div>
-        <article class="trendingPreview-seriesList">
+        <article class="trendingPreview-topRatedList">
             <!-- List from API -->
         </article>
+
+        <div class="trendingPreview-header">
+            <h2 class="trendingPreview-title">Upcoming</h2>
+            </div>
+            <article class="trendingPreview-upcomingList">
+                <!-- List from API -->
+            </article>
+            
     </section>
     
     <section id="categoriesPreview" class="categoriesPreview-container">
@@ -79,12 +87,22 @@
         <article class="categories-list">
             <!-- Movie category list -->
         </article>
-        <p></p>
+        <p id="releaseDate"></p>
         <p class="movieDetail-description">
         <!-- description -->
         </p>
-        
-        <article class="relatedMovies-container">
+        <article class="movieProviders" style="margin-top: 30px;">
+
+            <p style="font-size: 20px;">Available on: </p>
+            <p id="provider1" class="movieProvider">
+                <!-- reviews API -->
+            </p>
+            <p id="provider2" class="movieProvider">
+                <!-- reviews API -->
+            </p>
+           
+        </article>
+        <article class="relatedMovies-container" style="margin-top: 80px;">
             <h2 class="relatedMovies-title">Related films</h2>
             <div class="relatedMovies-scrollContainer">
                 <!-- <div class="movie-container">
@@ -96,6 +114,7 @@
                 </div> -->
             </div>
         </article>
+
     </section>
 
 <footer>2023 © by Cristian Zapata. All rights reserved.</footer>

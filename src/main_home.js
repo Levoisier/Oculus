@@ -33,7 +33,11 @@ function createMovies(movies, container){
         'src', 
         'https://image.tmdb.org/t/p/w300/' + movie.poster_path,
         );
-
+        
+        const date = new Date(movie.release_date);
+        const options = {month: 'long', day: 'numeric', year: 'numeric'};
+        const formattedDate = date.toLocaleDateString('en-US', options);
+        releaseDate.innerHTML = `Release date: ${formattedDate}`;
         movieContainer.appendChild(movieImg);
         container.appendChild(movieContainer);
     });
@@ -69,37 +73,31 @@ function createCategories(genres, container) {
 //API callings
 
 async function getTrendingPreview(){
-    const res1 = await fetch('https://api.themoviedb.org/3/trending/movie/day?api_key=' + API_KEY);
-    const res2 = await fetch('https://api.themoviedb.org/3/movie/top_rated?api_key=' + API_KEY);
-    const data1 = await res1.json();
-    const data2 = await res2.json();
-
-    const movies = data1.results;
-    const series= data2.results;
-    
+    const {data} = await api('trending/movie/day');
+    const movies = data.results;
     //Trending movie list
 
     createMovies(movies, trendingMoviesPreviewList)
-    
-    //Trending series List
-    trendingSeriesPreviewList.innerHTML = '';
+}
 
-    series.forEach(serie => {
+async function getTopRatedPreview(){    
+    const {data} = await api('movie/top_rated');
+    const topRated = data.results;
+    //Trending movie list
+    
+    createMovies(topRated, topRatedPreviewList)
+    
+   
+}
 
-        const serieContainer = document.createElement('div')
-        serieContainer.classList.add('serie-container');
+async function getUpcomingPreview(){    
+    const {data} = await api('movie/upcoming');
+    const upcoming = data.results;
+    //Trending movie list
     
-        const serieImg = document.createElement('img')
-        serieImg.classList.add('serie-img');
-        serieImg.setAttribute('alt', serie.title)
-        serieImg.setAttribute(
-        'src', 
-        'https://image.tmdb.org/t/p/w300/' + serie.poster_path,
-        );
+    createMovies(upcoming, upcomingPreviewList)
     
-        serieContainer.appendChild(serieImg);
-        trendingSeriesPreviewList.appendChild(serieContainer);
-    });
+   
 }
 
 async function getCategoriesPreview(){
@@ -175,6 +173,7 @@ async function getMovieById(id){
 
     createCategories(movie.genres, movieDetailCategoriesList);
     getRelatedMoviesById(id);
+    getProvidersById(id);
 }
 
 async function getRelatedMoviesById(id){
@@ -183,6 +182,30 @@ async function getRelatedMoviesById(id){
 
     createMovies(relatedMovies, relatedMoviesContainer);
     relatedMoviesContainer.scrollTo(0,0);
+}
+
+async function getProvidersById(id){
+    const {data} = await api(`movie/${id}/watch/providers`);
+    let platforms= data.results.CO;
+
+        const movieImg = document.createElement('img')
+        movieImg.classList.add('movie-img');
+        movieImg.setAttribute(
+        'src', 
+        'https://image.tmdb.org/t/p/w200/' + platforms.flatrate[0].logo_path,
+        );
+
+        provider1.appendChild(movieImg);
+
+        const movieImg2 = document.createElement('img')
+            movieImg2.classList.add('movie-img');
+            movieImg2.setAttribute(
+            'src', 
+            'https://image.tmdb.org/t/p/w200/' + platforms.flatrate[1].logo_path,
+            );
+
+        provider2.appendChild(movieImg2);
+    
 }
 
 nextPageBtn.addEventListener('click', () =>{

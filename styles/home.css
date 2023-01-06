@@ -242,7 +242,7 @@ button {
   max-width: 150px;
 }
 
-.trendingPreview-seriesList {
+.trendingPreview-topRatedList {
     overflow-x: scroll;
     overflow-y: hidden;
     white-space: nowrap;
@@ -252,13 +252,39 @@ button {
     
   }
 
-  .trendingPreview-seriesList .serie-container {
+  .trendingPreview-topRatedList .movie-container {
     display: inline-block;
     margin-right: 8px;
    
   }
   
-  .trendingPreview-seriesList .serie-container .serie-img {
+  .trendingPreview-topRatedList .movie-container .movie-img {
+    height: 225px;
+    min-height: 225px;
+    max-height: 225px;
+    width: 150px;
+    min-width: 150px;
+    max-width: 150px;
+  
+  }
+
+  .trendingPreview-upcomingList {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+    height: 241px;
+    padding-left: 24px;
+    padding-bottom: 16px;
+    
+  }
+
+  .trendingPreview-upcomingList .movie-container {
+    display: inline-block;
+    margin-right: 8px;
+   
+  }
+  
+  .trendingPreview-upcomingList .movie-container .movie-img {
     height: 225px;
     min-height: 225px;
     max-height: 225px;
@@ -428,7 +454,16 @@ button {
   min-height: 187.5px;
   max-height: 187.5px;
 }
+
+.movieProviders img{
+  float: left;
+}
+.movieProviders .movieProvider .movie-img {
+  height: 50px;
+  width: 50px;
+  margin-left: 10px;
   
+}
 
 /* Footer */
 footer {

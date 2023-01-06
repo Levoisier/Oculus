@@ -4,6 +4,12 @@ searchFormBtn.addEventListener('click', () => {
     location.hash = '#search=' + searchFormInput.value.trim();
 });
 
+searchFormInput.addEventListener('keydown', event => {
+    if(event.key === 'Enter'){
+        location.hash = '#search=' + searchFormInput.value.trim();
+    }
+});
+
 trendingBtn.addEventListener('click', () => {
     location.hash = '#trends=';
 });
@@ -54,6 +60,8 @@ function homePage(){
 
     page = 1;
     getTrendingPreview();
+    getTopRatedPreview();
+    getUpcomingPreview();
     getCategoriesPreview();   
 }
 
@@ -96,6 +104,8 @@ function movieDetailsPage(){
     headerCategoryTitle.classList.add('inactive');
     searchForm.classList.add('inactive');
     pageBtns.classList.add('inactive');
+    provider1.innerHTML = '';
+    provider2.innerHTML = '';
 
     trendingPreviewSection.classList.add('inactive');
     categoriesPreviewSection.classList.add('inactive');
